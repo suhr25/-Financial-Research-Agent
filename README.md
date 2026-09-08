@@ -82,7 +82,7 @@ agent framework's abstractions would. This is a documented simplification, not a
   source; Alpha Vantage or yfinance as the structured financial-API source
 - **Storage**: SQLite (via SQLAlchemy), with a repository layer separating sources / claims /
   evidence / verification results / conflicts / research runs / reports
-- **Frontend**: plain HTML/CSS/JS (no build step) served by FastAPI's `StaticFiles`
+- **Frontend**: React 18 + TypeScript + Vite, served from the FastAPI app's built `frontend/dist` bundle
 - **Testing**: pytest, with a fully mocked end-to-end path (no live API dependency)
 - **Deployment**: Docker / docker-compose
 
@@ -153,11 +153,24 @@ See `.env.example` for the full list. Key ones:
 ## 6. Running Locally
 
 ```bash
+cd frontend
+npm install
+npm run build
+cd ..
 uvicorn app.main:app --reload --port 8000
 ```
 
 Open `http://localhost:8000` for the web UI, or `http://localhost:8000/docs` for the
 interactive API docs.
+
+For frontend-only development with hot reload, run the backend on port 8000 and then:
+
+```bash
+cd frontend
+npm run dev
+```
+
+The Vite dev server proxies `/api` requests to `http://localhost:8000`.
 
 ## 7. Running with Docker
 

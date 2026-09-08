@@ -33,8 +33,12 @@ app = FastAPI(title="Financial Research Agent", version="0.1.0", lifespan=lifesp
 
 app.include_router(router, prefix="/api")
 
-FRONTEND_DIR = BASE_DIR / "frontend"
+FRONTEND_DIR = BASE_DIR / "frontend" / "dist"
+if not FRONTEND_DIR.exists():
+    FRONTEND_DIR = BASE_DIR / "frontend"
 if FRONTEND_DIR.exists():
+    if (FRONTEND_DIR / "assets").exists():
+        app.mount("/assets", StaticFiles(directory=str(FRONTEND_DIR / "assets")), name="assets")
     app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
 
     @app.get("/")
