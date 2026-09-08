@@ -75,7 +75,8 @@ function App() {
     if (!trimmed || loading) return;
     setQuery(trimmed); setLoading(true); setError(""); setRun(null); setReport(null); setClaims([]); setSources([]); setConflicts([]);
     try {
-      const nextRun = await api.startResearch(trimmed);
+      const startedRun = await api.startResearch(trimmed);
+      const nextRun = await api.research(startedRun.research_run_id);
       setRun(nextRun);
       if (nextRun.status === "failed") throw new Error(nextRun.error || "Research run failed.");
       const [nextClaims, nextSources, nextConflicts, nextReport] = await Promise.all([
