@@ -6,3 +6,6 @@ data/*.db
 evaluation/results/
 .env
 *.egg-info/
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo

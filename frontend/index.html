@@ -1,118 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Financial Research Agent</title>
-  <link rel="stylesheet" href="/static/style.css" />
-</head>
-<body>
-  <header class="app-header">
-    <div class="header-inner">
-      <div class="brand">
-        <span class="brand-mark">FRA</span>
-        <div>
-          <h1>Financial Research Agent</h1>
-          <p class="tagline">Agentic research with dual-path claim verification</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="query-panel">
-      <label for="query-input">Company / Research Query</label>
-      <div class="query-row">
-        <input id="query-input" type="text" placeholder="e.g. Analyze Apple Q3 2024" autocomplete="off" />
-        <button id="run-btn" class="btn-primary">Run Research</button>
-      </div>
-      <div class="example-chips">
-        <span class="chip" data-query="Analyze Apple Q3 2024">Analyze Apple Q3 2024</span>
-        <span class="chip" data-query="Analyze Microsoft's revenue, profitability and major risks for FY2024">Microsoft FY2024</span>
-        <span class="chip" data-query="Analyze NVIDIA revenue and profitability">NVIDIA revenue &amp; profitability</span>
-        <span class="chip" data-query="Compare Apple and Microsoft">Compare Apple and Microsoft</span>
-      </div>
-      <div id="demo-banner" class="demo-banner hidden"></div>
-    </section>
-
-    <section id="status-panel" class="status-panel hidden">
-      <div class="spinner"></div>
-      <span id="status-text">Running research pipeline…</span>
-    </section>
-
-    <section id="error-panel" class="error-panel hidden"></section>
-
-    <section id="results" class="results hidden">
-      <div class="overview-card">
-        <div class="overview-grid">
-          <div><span class="label">Company</span><span id="ov-company" class="value">—</span></div>
-          <div><span class="label">Period</span><span id="ov-period" class="value">—</span></div>
-          <div><span class="label">Status</span><span id="ov-status" class="value">—</span></div>
-          <div><span class="label">Sources</span><span id="ov-sources" class="value">—</span></div>
-          <div><span class="label">Claims</span><span id="ov-claims" class="value">—</span></div>
-          <div><span class="label">Avg. Confidence</span><span id="ov-confidence" class="value">—</span></div>
-        </div>
-        <div id="verdict-bar" class="verdict-bar"></div>
-      </div>
-
-      <nav class="tabs">
-        <button class="tab-btn active" data-tab="overview">Overview</button>
-        <button class="tab-btn" data-tab="financials">Financials</button>
-        <button class="tab-btn" data-tab="risks">Risks</button>
-        <button class="tab-btn" data-tab="findings">Key Findings</button>
-        <button class="tab-btn" data-tab="claims">Claims</button>
-        <button class="tab-btn" data-tab="conflicts">Conflicts</button>
-        <button class="tab-btn" data-tab="sources">Sources</button>
-      </nav>
-
-      <div id="tab-overview" class="tab-panel active">
-        <h2>Executive Overview</h2>
-        <p id="overview-text" class="prose"></p>
-        <h2>Claim Verification Summary</h2>
-        <p id="verification-summary-text" class="prose"></p>
-        <div id="comparison-tables"></div>
-      </div>
-
-      <div id="tab-financials" class="tab-panel">
-        <h2>Financial Performance</h2>
-        <div id="financial-content" class="prose-list"></div>
-        <h2>Key Metrics</h2>
-        <div id="key-metrics-content" class="prose-list"></div>
-      </div>
-
-      <div id="tab-risks" class="tab-panel">
-        <h2>Risks</h2>
-        <div id="risks-content" class="prose-list"></div>
-      </div>
-
-      <div id="tab-findings" class="tab-panel">
-        <h2>Important Findings</h2>
-        <div id="findings-content" class="prose-list"></div>
-      </div>
-
-      <div id="tab-claims" class="tab-panel">
-        <h2>Extracted &amp; Verified Claims</h2>
-        <div class="claim-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="supported">Supported</button>
-          <button class="filter-btn" data-filter="contradicted">Contradicted</button>
-          <button class="filter-btn" data-filter="insufficient">Insufficient</button>
-        </div>
-        <div id="claims-list"></div>
-      </div>
-
-      <div id="tab-conflicts" class="tab-panel">
-        <h2>Conflicting Information</h2>
-        <div id="conflicts-content"></div>
-      </div>
-
-      <div id="tab-sources" class="tab-panel">
-        <h2>Sources</h2>
-        <div id="sources-list"></div>
-      </div>
-    </section>
-  </main>
-
-  <script src="/static/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10262f" />
+    <meta name="description" content="Financial Research Agent — verified financial intelligence with source-level evidence." />
+    <title>Lattice Research Intelligence</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
