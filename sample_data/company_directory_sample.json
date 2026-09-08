@@ -1,0 +1,14 @@
+[
+  {"name": "Apple Inc.", "ticker": "AAPL", "cik": "0000320193", "exchange": "NASDAQ"},
+  {"name": "Microsoft Corporation", "ticker": "MSFT", "cik": "0000789019", "exchange": "NASDAQ"},
+  {"name": "Tesla, Inc.", "ticker": "TSLA", "cik": "0001318605", "exchange": "NASDAQ"},
+  {"name": "NVIDIA Corporation", "ticker": "NVDA", "cik": "0001045810", "exchange": "NASDAQ"},
+  {"name": "Amazon.com, Inc.", "ticker": "AMZN", "cik": "0001018724", "exchange": "NASDAQ"},
+  {"name": "Alphabet Inc.", "ticker": "GOOGL", "cik": "0001652044", "exchange": "NASDAQ"},
+  {"name": "Meta Platforms, Inc.", "ticker": "META", "cik": "0001326801", "exchange": "NASDAQ"},
+  {"name": "Netflix, Inc.", "ticker": "NFLX", "cik": "0001065280", "exchange": "NASDAQ"},
+  {"name": "JPMorgan Chase & Co.", "ticker": "JPM", "cik": "0000019617", "exchange": "NYSE"},
+  {"name": "Reliance Industries Limited", "ticker": "RELIANCE", "cik": null, "exchange": "NSE"},
+  {"name": "Tata Consultancy Services Limited", "ticker": "TCS", "cik": null, "exchange": "NSE"},
+  {"name": "Infosys Limited", "ticker": "INFY", "cik": "0001067491", "exchange": "NYSE"}
+]
