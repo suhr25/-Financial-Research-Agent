@@ -113,7 +113,7 @@ financial-research-agent/
 │   ├── llm/                      # LLMProvider + Claude/OpenAI implementations
 │   ├── schemas/                  # canonical Pydantic models
 │   └── config.py
-├── frontend/                     # index.html, style.css, app.js
+├── frontend/                     # index.html, style.css, app.js,React 18 + TypeScript + Vite
 ├── tests/                        # pytest: unit + integration + adversarial + e2e
 ├── evaluation/                   # hand-labelled eval sets, calibration, run_evaluation.py
 ├── sample_data/                  # bundled company directory + mock fixtures
