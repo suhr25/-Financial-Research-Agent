@@ -63,16 +63,6 @@ This mirrors the PRD's high-level and low-level design diagrams: `query_planner`
 storage layer with distinct `source` / `claim` / `evidence` / `verification_results` /
 `conflicts` / `research_runs` / `reports` tables.
 
-### Why not LangChain?
-
-The stack list mentions LangChain, but this project deliberately implements a small custom
-`LLMProvider` abstraction (`app/llm/`) and direct orchestration instead. Reasoning: the
-pipeline's core requirement is exact control over structured Pydantic outputs, verbatim
-evidence-span provenance, and strict context isolation between synthesis and verification
-(see "verifier grading its own homework" below) - a thin, auditable direct-API layer makes
-those guarantees easier to verify by reading the code than routing through a general-purpose
-agent framework's abstractions would. This is a documented simplification, not an oversight.
-
 ## 3. Technology Stack
 
 - **Python 3.11+**, FastAPI, Pydantic v2
